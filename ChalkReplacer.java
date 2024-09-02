@@ -18,13 +18,14 @@ public class ChalkReplacer {
 
         for (int i = 0; i < size; i++) {
             if (rem == 0){
-                return turn;
+                return turn; // check first whether the remainder is 0 then return current turn
             }
             if (rem < chalk[i]){
-                return i;
+                return i; // check whether current value at chalk[i] is greater than remainder then return current i or turn
             }
-            rem -= chalk[i];
+            rem -= chalk[i]; 
             turn = i+1;
+            // subtract remainder = remainder - chalk[i] and increment the turn value
         }
         return turn;
     }
